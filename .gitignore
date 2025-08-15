@@ -1,0 +1,21 @@
+# go build artifacts
+/bin/
+/dist/
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+
+# Go
+/vendor/
+/go.sum
+
+# Editors/OS
+.idea/
+.vscode/
+*.swp
+.DS_Store
+
