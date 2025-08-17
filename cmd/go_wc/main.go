@@ -17,7 +17,13 @@ import (
 	"github.com/rajasatyajit/go-wc/pkg/wc/locale"
 )
 
-const version = "0.1.0"
+// Build-time variables (set by Makefile)
+var (
+	version   = "dev"
+	commit    = "unknown"
+	buildTime = "unknown"
+	goVersion = "unknown"
+)
 
 // cliConfig holds parsed CLI options
 type cliConfig struct {
@@ -99,6 +105,9 @@ func main() {
 	}
 	if cfg.showVer {
 		fmt.Printf("go_wc version %s\n", version)
+		fmt.Printf("  commit: %s\n", commit)
+		fmt.Printf("  built: %s\n", buildTime)
+		fmt.Printf("  go: %s\n", goVersion)
 		return
 	}
 
